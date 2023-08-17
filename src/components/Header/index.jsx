@@ -1,4 +1,4 @@
-import { Container, Menu, Desktop, Logout, New, Search } from "./styles";
+import { Container, Menu, Desktop, Logout, Search } from "./styles";
 import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { PiReceipt } from "react-icons/pi";
 import { RxExit } from "react-icons/rx";
@@ -29,7 +29,6 @@ export function Header(){
                         
                     />
                 </Search>
-
 
                 <Desktop>
 
