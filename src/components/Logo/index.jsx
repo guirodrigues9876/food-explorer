@@ -8,7 +8,6 @@ export function Logo({ fontSize, width, height, display }) {
         <img src={logo} width={width} height={height} alt="Polígono Azul" />
         {/* {isAdmin && <p>admin</p>} */}
       </div>
-      <h1 >Food Explorer</h1>
     </Container >
   )
 }

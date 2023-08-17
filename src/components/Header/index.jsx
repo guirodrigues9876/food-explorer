@@ -2,7 +2,6 @@ import { Container, Menu, Desktop, Logout, New, Search } from "./styles";
 import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { PiReceipt } from "react-icons/pi";
 import { RxExit } from "react-icons/rx";
-import { Link } from 'react-router-dom';
 import { BsReceiptCutoff } from "react-icons/bs";
 
 import { Logo } from "../Logo";
@@ -31,27 +30,27 @@ export function Header(){
                     />
                 </Search>
 
-            </Menu>
 
-            <Desktop>
+                <Desktop>
 
-                {/* <>
-                    <button type="button">
+                    {/* <>
+                        <button type="button">
                         <BsReceiptCutoff size={24} />
                         <p>Pedidos <span>(9)</span></p>
-                    </button>
-                </> */}
+                        </button>
+                    </> */}
 
-                <>
-                    <a href="/add">
-                    Novo Prato
-                    </a>
-                </>
+                    <>
+                        <a href="/add">
+                        Novo Prato
+                        </a>
+                    </>
 
-                <Logout>
-                    <RxExit size={24}/>
-                </Logout>
-            </Desktop>
+                    <Logout>
+                        <RxExit size={24}/>
+                    </Logout>
+                </Desktop>
+            </Menu>
         </Container>
     );
 }

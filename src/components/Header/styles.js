@@ -6,6 +6,7 @@ export const Container = styled.div`
     width: 100%;
     height: 11.4rem;
 
+    border: 1px solid yellow;
 
     background: ${({ theme }) => theme.COLORS.BACKGROUND_SIGN};
 
@@ -22,16 +23,18 @@ export const Menu = styled.div`
     text-align: center;
     padding: 0 2.8rem 0 2.8rem;
 
+    border: 1px solid red;
+
     > button:nth-child(1) {
         border: none;
         background: transparent;
 
         svg {
-        color: ${({ theme }) => theme.COLORS.WHITE};
+          color: ${({ theme }) => theme.COLORS.WHITE};
         }
 
         @media(min-width: 1024px) {
-        display: none;
+          display: none;
         }
     }
 
@@ -62,7 +65,7 @@ export const Menu = styled.div`
   }
 
   @media(min-width: 1024px) {
-    padding: 2.4rem 12.3rem;
+    padding: 2.4rem 0 2.4rem 12.3rem;
 
     .mobile {
       display: none;
@@ -171,10 +174,6 @@ export const Search = styled.div`
     }
   }
 `
-
-export const New = styled(Link)`
-  
-`;
 
 export const Logout = styled.button`
   border: none;

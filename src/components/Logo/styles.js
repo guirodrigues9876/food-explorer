@@ -5,19 +5,19 @@ export const Container = styled.div`
   gap: 1.0rem;
   align-items: center;
 
- div {
-  display: flex;
-  align-items: center;
-  gap: .8rem;
+  div {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
 
-  p {
-    font-size: 1.2rem;
-    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
-    line-height: 160%;
+    p {
+      font-size: 1.2rem;
+      font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+      line-height: 160%;
 
-    color: ${({ theme }) => theme.COLORS.CYAN};
+      color: ${({ theme }) => theme.COLORS.CYAN};
+    }
   }
- }
 
 
  > h1 {
