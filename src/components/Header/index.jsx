@@ -1,3 +1,5 @@
+import { useAuth } from '../../hooks/auth';
+
 import { Container, Menu, Desktop, Logout, Search } from "./styles";
 import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { PiReceipt } from "react-icons/pi";
@@ -7,6 +9,9 @@ import { BsReceiptCutoff } from "react-icons/bs";
 import { Logo } from "../Logo";
 
 export function Header(){
+
+    const { signOut } = useAuth();
+
 
     return (
         <Container>
@@ -45,7 +50,7 @@ export function Header(){
                         </a>
                     </>
 
-                    <Logout>
+                    <Logout onClick={signOut}>
                         <RxExit size={24}/>
                     </Logout>
                 </Desktop>
