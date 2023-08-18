@@ -1,9 +1,9 @@
 import { Container, Form } from './styles';
-
+import { Link } from 'react-router-dom';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
-import brand from "../../assets/brand.svg";
+import brand from "../../assets/logo.svg";
 
 export function SignIn(){
 
@@ -35,7 +35,9 @@ export function SignIn(){
                         title="Entrar"
                     
                     />
-                    <a href=''>Criar conta</a>
+                    <Link to="/register">
+                        Criar conta
+                    </Link>
                 </div>
             </Form>
         </Container>

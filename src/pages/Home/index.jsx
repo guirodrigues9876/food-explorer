@@ -14,7 +14,7 @@ export function Home(){
             <Header />
 
 
-                <Main>
+            <Main>
                 <Content>
 
 
