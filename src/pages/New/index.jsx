@@ -18,7 +18,6 @@ import { Ingredient } from "../../components/Ingredient";
 import { Textarea } from "../../components/Textarea";
 
 
-
 export function New() {
     const [imageFile, setImageFile] = useState(null);
     const [name, setName] = useState("");
@@ -29,10 +28,10 @@ export function New() {
     const [description, setDescription] = useState("");
 
     
-    async function handleChangeImage(event) {
+    async function handleImageChange(event) {
         const file = event.target.files[0];
         setImageFile(file);
-      }
+    }
     
 
     const navigate = useNavigate();
@@ -51,8 +50,8 @@ export function New() {
     }
 
     async function handleNewDish(){
-        
-        
+
+        // Check inputs        
         
         try{
 
@@ -98,7 +97,7 @@ export function New() {
                             title={"Imagem do prato"}
                             text={"Selecione imagem"}
                             id="image"
-                            onChange={handleChangeImage}
+                            onChange={handleImageChange}
                         />
 
                         <Input

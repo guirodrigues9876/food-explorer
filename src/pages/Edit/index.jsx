@@ -19,6 +19,7 @@ import { api } from "../../services/api";
 
 export function Edit() {
 
+    const [imageFile, setImageFile] = useState(null);
     const [ name, setName ] = useState("");
     const [ category, setCategory ] = useState("meals");
     const [ ingredients, setIngredients ] = useState([]);
@@ -26,15 +27,13 @@ export function Edit() {
     const [ price, setPrice ] = useState(0);
     const [ description, setDescription ] = useState("");
 
-    const [image, setImage] = useState(null);
-    const [fileName, setFileName] = useState("");
-    const [updatedImage, setUpdatedImage] = useState(null);
+    // const [image, setImage] = useState(null);
+    // const [fileName, setFileName] = useState("");
+    // const [updatedImage, setUpdatedImage] = useState(null);
     
-    function handleImageChange(e) {
-        const file = e.target.files[0];
-        setImage(file);
-        setUpdatedImage(file);
-        setFileName(file.name);
+    function handleImageChange(event) {
+        const file = event.target.files[0];
+        setImageFile(file);
     }
     
     const params = useParams();
@@ -49,38 +48,44 @@ export function Edit() {
         setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted));
     }
 
+    async function handleDeleteDish(){
+        try{
+            await api.delete(`/dishes/${params.id}`);
+            alert("Prato excluído com sucesso!")
+            navigate("/")
+        }catch (error){
+            if (error.response) {
+                alert(error.response.data.message);
+            } else {
+                alert("Não foi possível excluir o prato.");
+            }
+        }
+    }
 
     async function handleUpdateDish(){
 
-        // if(!name || !category || !price || !ingredients || !description){
-        //     return alert("Preencha todos os campos.");
-        // }
+        if(!name || !category || !price || !ingredients || !description){
+            return alert("Preencha todos os campos.");
+        }
 
-        // if(newIngredient){
-        //     return alert("Você deixou um ingrediente no campo para adicionar, mas não adicionou")
-        // }
+        if(newIngredient){
+            return alert("Você deixou um ingrediente no campo para adicionar, mas não adicionou")
+        }
 
         try {
-            const updatedDish = {
-              name: name,
-              category: category,
-              price: price,
-              description: description,
-              ingredients: JSON.stringify(ingredients),
-            };
+            const form = new FormData();
 
-            if (image) {
-                const formData = new FormData();
-                formData.append("image", image);
-          
-                await api.put(`/dishes/${params.id}`, formData, {
-                  headers: { "Content-Type": "multipart/form-data" },
-                });
-              }
-
-            await api.put(`/dishes/${params.id}`, updatedDish);
+            form.append("name", name);
+            form.append("category", category);
+            form.append("price", price);
+            form.append("ingredients", JSON.stringify(ingredients));
+            form.append("description", description);
+            form.append("image", imageFile);
       
-            alert("Prato criado com sucesso!");
+            await api.put(`/dishes/${params.id}`, form)
+      
+      
+            alert("Prato editado com sucesso!");
             navigate(-1);
         }catch (error) {
             if (error.response) {
@@ -90,7 +95,6 @@ export function Edit() {
             }
         }
     }
-
 
     function handleBack() {
         navigate(-1);
@@ -138,7 +142,7 @@ export function Edit() {
                         <InputImage
                             icon={BsUpload}
                             title="Imagem do prato"
-                            text="Selecione imagem"
+                            text={imageFile ? imageFile.name : "Deixe o campo vazio para manter imagem anterior"}
                             id="image"
                             onChange={handleImageChange}
                         />
@@ -210,6 +214,7 @@ export function Edit() {
                         <Button
                             title={'Excluir Prato'}
                             className="deleteButton"
+                            onClick={handleDeleteDish}
                         />
                         <Button
                             title={'Salvar alterações'}
