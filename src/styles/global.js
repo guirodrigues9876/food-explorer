@@ -12,7 +12,7 @@ export default createGlobalStyle`
     }
 
     body {
-        overflow: hidden;
+        
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
         color: ${({ theme }) => theme.COLORS.WHITE};
 

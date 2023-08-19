@@ -1,4 +1,3 @@
-
 import { Container, Content, Banner, Main } from "./styles";
 
 import { Header } from "../../components/Header";
@@ -32,7 +31,7 @@ export function Home(){
 
 
 
-                    <Section title="Refeições">
+                        <Section title="Refeições">
 
                         <Card />
 

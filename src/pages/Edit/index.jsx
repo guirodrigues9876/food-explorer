@@ -1,3 +1,5 @@
+import { useState, useEffect } from  'react';
+import { useNavigate, useParams } from "react-router-dom";
 import { Container, Content, Form, Ingredients } from "./styles";
 
 import { RxCaretLeft } from "react-icons/rx";
@@ -13,13 +15,118 @@ import { Select } from "../../components/Select";
 import { Ingredient } from "../../components/Ingredient";
 import { Textarea } from "../../components/Textarea";
 
+import { api } from "../../services/api";
+
 export function Edit() {
+
+    const [ name, setName ] = useState("");
+    const [ category, setCategory ] = useState("meals");
+    const [ ingredients, setIngredients ] = useState([]);
+    const [ newIngredient, setNewIngredient ] = useState("");
+    const [ price, setPrice ] = useState(0);
+    const [ description, setDescription ] = useState("");
+
+    const [image, setImage] = useState(null);
+    const [fileName, setFileName] = useState("");
+    const [updatedImage, setUpdatedImage] = useState(null);
+    
+    function handleImageChange(e) {
+        const file = e.target.files[0];
+        setImage(file);
+        setUpdatedImage(file);
+        setFileName(file.name);
+    }
+    
+    const params = useParams();
+    const navigate = useNavigate();
+
+    function handleAddIngredient(){
+        setIngredients(prevState => [...prevState, newIngredient]);
+        setNewIngredient("");
+    }
+    
+    function handleRemoveIngredient(deleted){
+        setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted));
+    }
+
+
+    async function handleUpdateDish(){
+
+        // if(!name || !category || !price || !ingredients || !description){
+        //     return alert("Preencha todos os campos.");
+        // }
+
+        // if(newIngredient){
+        //     return alert("Você deixou um ingrediente no campo para adicionar, mas não adicionou")
+        // }
+
+        try {
+            const updatedDish = {
+              name: name,
+              category: category,
+              price: price,
+              description: description,
+              ingredients: JSON.stringify(ingredients),
+            };
+
+            if (image) {
+                const formData = new FormData();
+                formData.append("image", image);
+          
+                await api.put(`/dishes/${params.id}`, formData, {
+                  headers: { "Content-Type": "multipart/form-data" },
+                });
+              }
+
+            await api.put(`/dishes/${params.id}`, updatedDish);
+      
+            alert("Prato criado com sucesso!");
+            navigate(-1);
+        }catch (error) {
+            if (error.response) {
+                alert(error.response.data.message);
+            } else {
+                alert("Não foi possível atualizar o prato.");
+            }
+        }
+    }
+
+
+    function handleBack() {
+        navigate(-1);
+    }
+    
+    useEffect(() => {
+        async function fetchDish() {
+          try {
+            const response = await api.get(`/dishes/${params.id}`);
+    
+            const dish = response.data;
+    
+            setName(dish.name);
+            setCategory(dish.category);
+            setPrice(dish.price);
+            setIngredients(dish.ingredients.map(ingredient => ingredient.name));
+            setDescription(dish.description);
+    
+          } catch (error) {
+            if (error.response) {
+              return alert(error.response.data.message);
+            } else {
+              return alert("Erro ao carregar informações do prato.");
+            }
+          }
+        }
+    
+        fetchDish();
+      }, [])
+
     return(
 
         <Container>
             <Header />
             <Content>
-                <ButtonText>
+                <ButtonText onClick={handleBack}>
                     <RxCaretLeft />
                     voltar
                 </ButtonText>
@@ -30,9 +137,10 @@ export function Edit() {
                     <div>
                         <InputImage
                             icon={BsUpload}
-                            title={"Imagem do prato"}
-                            text={"Selecione imagem para alterá-la"}
+                            title="Imagem do prato"
+                            text="Selecione imagem"
                             id="image"
+                            onChange={handleImageChange}
                         />
 
                         <Input
@@ -40,9 +148,15 @@ export function Edit() {
                             placeholder="Ex.: Salada Ceasar"
                             title="Nome"
                             id="name"
+                            value={name} 
+                            onChange={e => setName(e.target.value)}
                         />
 
-                        <Select title="Categoria" />
+                        <Select 
+                            title="Categoria" 
+                            value={category}
+                            onChange={e => setCategory(e.target.value)}
+                        />
 
                     </div>
 
@@ -50,21 +164,26 @@ export function Edit() {
                         <Ingredients>
                             <label htmlFor="ingredients" >Ingredientes</label>
                             <div>
+                                {
+                                    ingredients.map((ingredient, index) => (
+                                        <Ingredient 
+                                            key={String(index)}
+                                            value={ingredient}
+                                            onClick={() => handleRemoveIngredient(ingredient)}
+                                        />
+                                    ))
 
-                                <Ingredient 
-                                    placeholder="Adicionar"
-                                    id="ingredients"
-                                    value="Pão naan"
-                                />
-
-                            {
+                                }
                                 
                                 <Ingredient 
-                                    placeholder="Adicionar"
                                     isNew
+                                    placeholder="Adicionar"
                                     id="ingredients"
+                                    value={newIngredient}
+                                    onChange= { e => setNewIngredient(e.target.value)}
+                                    onClick={handleAddIngredient}
                                 />
-                            }
+
                             </div>
                         </Ingredients>
 
@@ -73,6 +192,8 @@ export function Edit() {
                             placeholder="R$ 00,00"
                             title="Preço"
                             id="price"
+                            value={price}
+                            onChange={e => setPrice(e.target.value)}
                         />
 
                     </div>
@@ -81,6 +202,8 @@ export function Edit() {
                         placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
                         title="Descrição"
                         id="description"
+                        value={description}
+                        onChange={e => setDescription(e.target.value)}
                     />
 
                     <div>
@@ -91,6 +214,7 @@ export function Edit() {
                         <Button
                             title={'Salvar alterações'}
                             className="saveButton"
+                            onClick={handleUpdateDish}
                         />
                     </div>
             

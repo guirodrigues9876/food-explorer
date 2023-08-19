@@ -7,16 +7,16 @@ export const Container = styled.div`
   gap: 1.6rem;
   
   > label {
-  font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 100%;
+    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 
-  color: #C4C4CC;
+    color: #C4C4CC;
   }
 `;
 
@@ -34,20 +34,21 @@ export const Field = styled.div`
     font-size: 1.4rem;
     font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
     font-weight: 500;
-    line-height: 2.4rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
+  border-radius: 8px;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_500};
 
-  border-radius: 8px;
 
-  >input {
-    display: none;
+  > input {
+    /* display: none; */
+    /* background-color: transparent; */
+
   }
 
   > svg {
       color: ${({ theme }) => theme.COLORS.WHITE};
-    }
+  }
 `;

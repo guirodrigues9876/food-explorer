@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    min-width: 30rem;
-    height: 200rem;
+    min-width: 40rem;
+    height: 100vh;
 
     display: grid;
 
@@ -67,25 +67,25 @@ export const Form = styled.form`
       gap: 3.2rem;
     }
 
-@media(min-width: 1024px) {
-    > div:nth-child(1) {
-        display: flex;
-        flex-direction: row;
-        gap: 3.2rem;
-        align-items: center;
-    }
+    @media(min-width: 1024px) {
+        > div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            gap: 3.2rem;
+            align-items: center;
+        }
 
-    > div:nth-child(2) {
-        display: flex;
-        flex-direction: row;
-        gap: 3.2rem;
-        align-items: center;
-    }
+        > div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            gap: 3.2rem;
+            align-items: center;
+        }
 
-    > div:nth-child(4) {
-        width: 33rem;
-        align-self: flex-end;
-    }
+        > div:nth-child(4) {
+            width: 33rem;
+            align-self: flex-end;
+        }
 }
 `;
 
