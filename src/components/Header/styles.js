@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
+
     grid-area: header;
     width: 100%;
     height: 11.4rem;
+    border: 1px solid yellow;
 
     background: ${({ theme }) => theme.COLORS.BACKGROUND_SIGN};
 
@@ -21,6 +23,8 @@ export const Menu = styled.div`
     text-align: center;
     padding: 0 2.8rem 0 2.8rem;
 
+    border: 1px solid red;
+
     > button:nth-child(1) {
         border: none;
         background: transparent;
@@ -35,33 +39,34 @@ export const Menu = styled.div`
     }
 
     .mobile {
-        background: none;
-        border: none;
-        color: ${({ theme }) => theme.COLORS.WHITE};
-        position: relative;
+      background: none;
+      border: none;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+      position: relative;
 
-    div {
-      display: grid;
-      place-items: center;
+      div {
+        display: grid;
+        place-items: center;
 
-      position: absolute;
-      width: 2rem;
-      height: 2rem;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
 
-      top: -12px;
-      left: 15px;
+        top: -12px;
+        left: 15px;
 
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_BUTTON_300};
-      border-radius: 99px;
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_BUTTON_300};
+        border-radius: 99px;
 
-      font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
-      font-weight: 500;
-      font-size: 1.4rem;
-    }
+        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
   }
 
   @media(min-width: 1024px) {
-    padding: 2.4rem 0 2.4rem 12.3rem;
+    justify-content: space-between;
+    padding: 2.4rem 12.3rem;
 
     .mobile {
       display: none;
@@ -74,8 +79,8 @@ export const Menu = styled.div`
 `;
 
 export const Desktop = styled.div`
-  display: none;
 
+  display: none;
 
   a { 
     width: 21.6rem;
@@ -127,7 +132,7 @@ export const Desktop = styled.div`
       line-height: 2.4rem;
     }
   }
-`
+`;
 
 export const Search = styled.div`
   display: none;
@@ -171,6 +176,26 @@ export const Search = styled.div`
   }
 `
 
+export const NewDish = styled(Link)`
+  width: 21.6rem;
+  height: 4.8rem;
+  padding: 1.2rem 3.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_BUTTON_300};
+  color: ${({ theme }) => theme.COLORS.WHITE};
+    
+  border-radius: .5rem;
+
+  font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+`;
+
 export const Logout = styled.button`
   border: none;
   background: none;
@@ -179,4 +204,32 @@ export const Logout = styled.button`
 
   color: ${({ theme }) => theme.COLORS.WHITE};
   
+`;
+
+
+export const Logo = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    width: 16.1rem;
+  }
+
+  > p {
+      display: flex;
+      font-size: 1.2rem;
+      font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+      justify-content: end;
+      color: ${({ theme }) => theme.COLORS.CYAN};
+  }
+
+  @media (min-width: 1024px) {
+    width: auto;
+
+    > img {
+      width: 19.7rem;
+    }
+  }
 `;

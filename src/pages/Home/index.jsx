@@ -44,7 +44,7 @@ export function Home(){
     return(
         <Container>
             <Header filterDishes={e => setSearch(e.target.value)}/>
-
+            
             <Main>
                 <Content>
 

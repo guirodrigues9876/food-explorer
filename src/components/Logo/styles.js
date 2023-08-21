@@ -1,42 +1,29 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
-  gap: 1.0rem;
   align-items: center;
+  justify-content: center;
+  gap: .5rem;
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: .8rem;
+  > img {
+    width: 16.1rem;
+  }
 
-    p {
+  > p {
       font-size: 1.2rem;
       font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
-      line-height: 160%;
-
       color: ${({ theme }) => theme.COLORS.CYAN};
-    }
   }
 
-
- > h1 {
-  font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
-  font-weight: 700;
-  font-size: ${(props) => props.fontSize};
-  line-height: 4.4rem;
-  display: ${(props) => props.display};
-  }
-
-  @media(min-width: 1024px) {
-    div {
-      flex-direction: column;
-      width: 6rem;
-      gap: 0;
-    }
-
-    p {
-      align-self: flex-end;
+  @media (min-width: 1024px) {
+    width: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    > img {
+      width: 19.7rem;
     }
   }
 `;
