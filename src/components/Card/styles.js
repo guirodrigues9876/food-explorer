@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
     width: 21rem;
     height: fit-content;
@@ -36,6 +37,14 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.CYAN};
     }
 
+    .pencil{
+        align-self: flex-end;
+    
+        svg{
+        fill: ${({ theme }) => theme.COLORS.WHITE};
+        } 
+    }
+
     @media(min-width: 1024px) {
         height: fit-content;
         max-height: 46rem;
@@ -61,26 +70,34 @@ export const Title = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: center;
   color: ${({ theme }) => theme.COLORS.GRAY_200};
 
-  > h2 {
+  h2 {
     font-family: ${({ theme}) => theme.FONT.FONT_POPPINS};
     font-weight: 500;
     font-size: 1.4rem;
     text-align: center;
 
     width: 100%;
-    
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  a {
+    display: flex;
+    gap: .2rem;
+    
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    border: none;
+    background: transparent;
+  }
+
   @media (min-width: 1024px) {
-    > h2 {
+    h2 {
       font-weight: 700;
-      font-size: 2.4rem;
-      
+      font-size: 2.4rem; 
     }
 }
 `;

@@ -3,12 +3,14 @@ import { FiHeart } from "react-icons/fi";
 import { RxCaretRight } from "react-icons/rx";
 import { api } from "../../services/api";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { BiPencil } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 import dishPlaceholder from "../../assets/dishPlaceholder.png";
 
 import { Button } from "../Button";
 
-export function Card({ data }) {
+export function Card({ data, admin }) {
 
 
     const dishImage = data && data.image ? `${api.defaults.baseURL}/files/${data.image}` : dishPlaceholder;
@@ -17,11 +19,17 @@ export function Card({ data }) {
     return(
         <Container>
             
-                {/* <BiPencil size={"2.4rem"}/> */}
+                {admin && 
+                    <Link to={`/edit/${data.id}`} className="pencil">
+                        <BiPencil size={"2.4rem"}/>               
+                    </Link>
+                }
 
-                <FiHeart
-                    size={"2.4rem"}
-                />
+                {!admin && 
+                    <FiHeart
+                        size={"2.4rem"}
+                    />
+                }
 
                 <img
                    src={dishImage}
@@ -30,8 +38,10 @@ export function Card({ data }) {
                 />
 
                 <Title>
-                    <h2>{data.name}</h2>
-                    <RxCaretRight size={24} />
+                    <Link to={`/details/${data.id}`}>
+                        <h2>{data.name}</h2>
+                        <RxCaretRight size={24} />
+                    </Link>
                 </Title>
 
                 <Description>
