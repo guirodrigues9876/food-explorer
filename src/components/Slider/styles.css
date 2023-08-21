@@ -1,0 +1,19 @@
+
+.swiper-button-prev {
+    width: 77px;
+    color: #fff;
+  }
+  
+  .swiper-button-next {
+    width: 77px;
+    color: #fff;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    width: 340px !important;
+  }

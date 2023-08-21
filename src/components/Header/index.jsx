@@ -8,9 +8,9 @@ import { BsReceiptCutoff } from "react-icons/bs";
 
 import { Logo } from "../Logo";
 
-export function Header(){
-
-    const { signOut } = useAuth();
+export function Header({filterDishes}){
+    const { user, signOut } = useAuth();
+    // const isAdmin = user && user.isAdmin ? true : false;
 
 
     return (
@@ -31,7 +31,7 @@ export function Header(){
                     <input
                         type="search"
                         placeholder="Busque por pratos ou ingredientes"
-                        
+                        onChange={filterDishes}
                     />
                 </Search>
 
