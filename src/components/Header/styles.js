@@ -6,7 +6,6 @@ export const Container = styled.div`
     grid-area: header;
     width: 100%;
     height: 11.4rem;
-    border: 1px solid yellow;
 
     background: ${({ theme }) => theme.COLORS.BACKGROUND_SIGN};
 
@@ -22,8 +21,6 @@ export const Menu = styled.div`
     align-items: center;
     text-align: center;
     padding: 0 2.8rem 0 2.8rem;
-
-    border: 1px solid red;
 
     > button:nth-child(1) {
         border: none;

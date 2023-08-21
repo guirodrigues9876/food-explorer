@@ -20,7 +20,6 @@ export const Container = styled.div`
         position: absolute;
         top: 1.6rem;
         right: 1.6rem;
-        /* display: ${({ admin }) => admin ? 'none' : 'flex'}; */
     }
 
     > img {
@@ -41,16 +40,14 @@ export const Container = styled.div`
         align-self: flex-end;
     
         svg{
-        fill: ${({ theme }) => theme.COLORS.WHITE};
+          fill: ${({ theme }) => theme.COLORS.WHITE};
         } 
     }
 
     @media(min-width: 1024px) {
-        height: fit-content;
-        max-height: 46rem;
         width: 34rem;
-
-
+        height: fit-content;
+        
         > img {
             width: 17.6rem;
             height: 17.6rem;

@@ -25,8 +25,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid blue;
-
+    
     @media(min-width: 1024px) {
     padding: 0 12.4rem;
     }
