@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    margin-left: 2.4rem;
+    margin: 2.4rem;
 
     > h2 {
         
-        font-family: 'Poppins';
+        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
         font-size: 1.8rem;
         font-weight: 500;  
         color: ${({ theme }) => theme.COLORS.GRAY_100};
+        margin-bottom: 2.4rem;
+    }
+
+    @media (min-width: 1024px){
+        
+        > h2 {
+            font-size: 3.2rem;
+        }
     }
 `;

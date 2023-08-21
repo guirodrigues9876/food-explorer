@@ -16,8 +16,8 @@ export function Slider({ children }) {
       <Swiper
         rewind={true}
         spaceBetween={30}
-        slidesPerView={3}
-        navigation={true}
+        slidesPerView={'auto'}
+        navigation={true}      
         modules={[Navigation]}
         className="swiper"
         breakpoints={{

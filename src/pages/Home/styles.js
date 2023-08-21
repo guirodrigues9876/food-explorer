@@ -19,13 +19,13 @@ export const Main = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   grid-area: content;
-
-`;
+  `;
 
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: 1px solid blue;
 
     @media(min-width: 1024px) {
     padding: 0 12.4rem;
