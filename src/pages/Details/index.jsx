@@ -46,7 +46,6 @@ export function Details(){
             setData(response.data)
             
           } catch (error) {
-
             if (error.response) {
               return console.log(error.response.data.message);
             } else {
