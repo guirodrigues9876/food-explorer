@@ -1,4 +1,8 @@
 import { Container, Content, Description, Order, Picker, ButtonPurchase, Ingredients } from "./styles";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
+import { useAuth } from "../../hooks/auth";
+import { api } from "../../services/api";
 
 import { PiReceipt } from "react-icons/pi";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
@@ -6,64 +10,117 @@ import { RxCaretLeft } from "react-icons/rx";
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
 import { IngredientTag } from "../../components/IngredientTag";
 
-
-
-import prato1 from "../../assets/prato1.png";
+import dishPlaceholder from "../../assets/dishPlaceholder.png";
 
 
 export function Details(){
-    return(
+    const [data, setData] = useState(null);
+
+    const params = useParams();
+    const { user } = useAuth();
+    const isAdmin = user && user.isAdmin ? 1 : 0;
+
+    const dishImage = data && data.image ? `${api.defaults.baseURL}/files/${data.image}` : dishPlaceholder;
+
+    const navigate = useNavigate();
+
+
+    function handleEdit() {
+        navigate(`/edit/${params.id}`);
+    }
+
+    function handleBack() {
+        navigate(-1);
+    }
+
+    useEffect(() => {
+        async function fetchDish() {
+          
+          try {
+            const response = await api.get(`dishes/${params.id}`);
+    
+            setData(response.data)
+            
+          } catch (error) {
+
+            if (error.response) {
+              return console.log(error.response.data.message);
+            } else {
+              return console.log("Erro ao carregar informações");
+            }
+          }
+        }
+    
+        fetchDish();
+      }, [])
+
+    return (
         <Container>
             <Header />
 
             <Content>
 
-                <ButtonText>
+                <ButtonText onClick={handleBack}>
                     <RxCaretLeft />
                     voltar
                 </ButtonText>
 
-                <img src={prato1} alt="" />
+                <img src={dishImage} alt={`Imagem do prato,lanche, sobremesa ou bebida `} />
 
                 <Description>                
-                    <h2>Salada Ravanello</h2>
+                    <h2>{data.name}</h2>
 
-                    <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
+                    <p>{data.description}</p>
 
-                    <Ingredients>
-                        <IngredientTag title="Alface"></IngredientTag>
-                        <IngredientTag title="Alface"></IngredientTag>
-                        <IngredientTag title="Alface"></IngredientTag>
-                    </Ingredients>
-                    
+                    {
+                        data.ingredients &&
+                        <Ingredients>
+                            {
+                                data.ingredients.map(ingredient => (
+                                    <IngredientTag
+                                        key={String(ingredient.id)}
+                                        title={ingredient.name}
+                                    />     
+                                ))
+                            }
+                        </Ingredients>
 
-                    
+                    }    
 
                     <Order>
-                        <Picker>
-                            <AiOutlineMinus size={27} />
-                            <span>01</span>
-                            <AiOutlinePlus size={27} />
-                        </Picker>  
 
-                        <ButtonPurchase title="incluir">
-                            <PiReceipt size={21} />
-                            <span> pedir - R$ 25,00</span>
+                        {isAdmin &&
+                            <Button
+                                title={'Editar prato'}
+                                onClick={handleEdit}
+                            />
 
-                        </ButtonPurchase>
+                        }
+
+                        {!isAdmin &&
+                            <>
+                            <Picker>
+                                <AiOutlineMinus size={27} />
+                                <span>01</span>
+                                <AiOutlinePlus size={27} />
+                            </Picker>  
+
+                                <Button
+                                    title={'incluir'}
+                                />
+                            </>
+                        }
                     </Order>
 
                 </Description>
-
-
-
 
             </Content>
 
             <Footer />
         </Container>
     )
-};
+}
