@@ -13,7 +13,6 @@ import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
 import { IngredientTag } from "../../components/IngredientTag";
-import { Loading } from "../../components/Loading";
 
 import dishPlaceholder from "../../assets/dishPlaceholder.png";
 
@@ -56,13 +55,11 @@ export function Details(){
         }
     
         fetchDish();
-      }, [params.id]);
+      }, []);
 
       if(!data)     
          return <div>Carregando...</div>
       
-
-
     return (
         <Container>
             <Header />
