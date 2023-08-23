@@ -47,10 +47,9 @@ export function Details(){
             
           } catch (error) {
             if (error.response) {
-              return console.log(error.response.data.message);
-            } else {
-              return console.log("Erro ao carregar informações");
-            }
+                return alert(error.response.data.message);
+              }
+              return alert("Erro ao carregar informações");
           }
         }
     
