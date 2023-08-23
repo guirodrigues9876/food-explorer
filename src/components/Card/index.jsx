@@ -52,18 +52,20 @@ export function Card({ data, admin }) {
                     style: 'currency',
                     currency: 'BRL',
                 })}</span>
-
-
-                <Order>
-                    <Picker>
-                        <AiOutlineMinus size={24} />
-                        <span>01</span>
-                        <AiOutlinePlus size={24} />
-                    </Picker>  
-
-                    <Button title="incluir" />
-                </Order>
                 
+
+                {!admin && 
+
+                    <Order>
+                        <Picker>
+                            <AiOutlineMinus size={24} />
+                            <span>01</span>
+                            <AiOutlinePlus size={24} />
+                        </Picker>  
+
+                        <Button title="incluir" />
+                    </Order>
+                }
         </Container>
     );
 }
