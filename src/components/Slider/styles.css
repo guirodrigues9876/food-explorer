@@ -31,7 +31,7 @@
     z-index: 1;
     bottom: 0;
     left: 0;    
-    /* border: 1px solid yellow; */
+    
 
   }
 
@@ -45,7 +45,6 @@
     z-index: 2;
     bottom: 0;
     right: 0;  
-    /* border: 1px solid yellow; */
     
 
   }
