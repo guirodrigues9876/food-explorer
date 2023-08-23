@@ -7,6 +7,8 @@ export const Container = styled.div`
   gap: 1.6rem;
   
   > label {
+    width: 100%;
+    height: 100px;
     font-family: ${({ theme }) => theme.FONT.ROBOTO};
     font-weight: 400;
     font-size: 1.6rem;
@@ -14,8 +16,10 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1.6rem;
 
+    cursor: pointer;
     color: #C4C4CC;
   }
 `;
@@ -25,6 +29,7 @@ export const Field = styled.div`
   height: 4.8rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 1.2rem 1.4rem;
   cursor: pointer;
@@ -43,9 +48,9 @@ export const Field = styled.div`
 
 
   > input {
-    /* display: none; */
-    /* background-color: transparent; */
-
+    visibility: hidden;
+    position: fixed; 
+    left: -9000px
   }
 
   > svg {
