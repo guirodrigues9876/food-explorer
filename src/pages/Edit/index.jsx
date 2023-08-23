@@ -138,7 +138,7 @@ export function Edit() {
                         <InputImage
                             icon={BsUpload}
                             title="Imagem do prato"
-                            text={imageFile ? imageFile.name : ""}
+                            text={imageFile ? imageFile.name : "Selecione a imagem do prato"}
                             id="image"
                             onChange={handleImageChange}
                         />

@@ -4,7 +4,7 @@ import { Container, Field } from './styles';
 export function InputImage({ icon: Icon, title, id, text, ...rest }){
     return(
         <Container>
-            <label htmlFor={"id"}>
+            <label htmlFor={id}>
                 {title}
                 <Field>
                     {Icon && <Icon size={24} />}
