@@ -26,7 +26,7 @@ export function Edit() {
     const [ newIngredient, setNewIngredient ] = useState("");
     const [ price, setPrice ] = useState(0);
     const [ description, setDescription ] = useState("");
-    
+
     function handleImageChange(event) {
         const file = event.target.files[0];
         setImageFile(file);
@@ -138,7 +138,7 @@ export function Edit() {
                         <InputImage
                             icon={BsUpload}
                             title="Imagem do prato"
-                            text={imageFile ? imageFile.name : "Deixe o campo vazio para manter imagem anterior"}
+                            text={imageFile ? imageFile.name : ""}
                             id="image"
                             onChange={handleImageChange}
                         />
