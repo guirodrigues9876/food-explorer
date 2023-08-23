@@ -35,7 +35,7 @@ export const Container = styled.div`
         width: 100%;
         padding: 0.8rem 0.8rem 0.8rem 1.6rem;
 
-        font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme }) => theme.FONT.ROBOTO};
         color: ${({ theme }) => theme.COLORS.WHITE};
         font-size: 1.6rem;
         background: transparent;
@@ -45,7 +45,7 @@ export const Container = styled.div`
         &::placeholder {
 
             color: ${({ theme }) => theme.COLORS.GRAY_500};
-            font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+            font-family: ${({ theme }) => theme.FONT.ROBOTO};
             font-size: 1.6rem;
 
         }

@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 100%;
 
     > label {
-        font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme }) => theme.FONT.ROBOTO};
         font-weight: 400;
         font-size: 1.6rem;
 
@@ -21,7 +21,7 @@ export const Container = styled.div`
         border-radius: .8rem;
         border: none;
         
-        font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme }) => theme.FONT.ROBOTO};
         font-weight: 400;
         font-size: 1.6rem;
         
@@ -33,6 +33,6 @@ export const Container = styled.div`
 
     &::placeholder{
         font-size: 1.6rem;
-        font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme }) => theme.FONT.ROBOTO};
     }
 `;

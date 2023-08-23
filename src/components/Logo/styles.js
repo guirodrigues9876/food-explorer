@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   > p {
       font-size: 1.2rem;
-      font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+      font-family: ${({ theme }) => theme.FONT.ROBOTO};
       color: ${({ theme }) => theme.COLORS.CYAN};
   }
 

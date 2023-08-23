@@ -4,7 +4,7 @@ export const Container = styled.button`
   background: none;
   border: none;
 
-  font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+  font-family: ${({ theme }) => theme.FONT.POPPINS};
   font-weight: 500;
   font-size: 2.4rem;
 

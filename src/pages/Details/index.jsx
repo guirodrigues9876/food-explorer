@@ -75,7 +75,7 @@ export function Details(){
 
                     <p>{data.description}</p>
 
-                    {
+                    {/* {
                         data.ingredients &&
                         <Ingredients>
                             {
@@ -88,18 +88,18 @@ export function Details(){
                             }
                         </Ingredients>
 
-                    }    
+                    }     */}
 
                     <Order>
-
+{/* 
                         {isAdmin &&
                             <Button
                                 title={'Editar prato'}
                                 onClick={handleEdit}
                             />
 
-                        }
-
+                        } */}
+{/* 
                         {!isAdmin &&
                             <>
                             <Picker>
@@ -112,7 +112,7 @@ export function Details(){
                                     title={'incluir'}
                                 />
                             </>
-                        }
+                        } */}
                     </Order>
 
                 </Description>

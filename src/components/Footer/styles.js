@@ -7,7 +7,7 @@ export const Container = styled.footer`
     align-items: center;
     align-self: flex-end;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_FOOTER};
 
     width: 100%;
     height: 7.7rem;
@@ -17,8 +17,8 @@ export const Container = styled.footer`
     span {
         font-size: 1rem;
         text-align: right;
-        font-family: ${({ theme }) => theme.FONT.FONT_DM};
-        color: ${({ theme }) => theme.COLORS.WHITE_200};
+        font-family: ${({ theme }) => theme.FONT.DM};
+        color: ${({ theme }) => theme.COLORS.WHITE_100};
     }
 
     @media(min-width: 1024px) {
@@ -27,7 +27,7 @@ export const Container = styled.footer`
         span {
             font-size: 1.4rem;
             font-weight: 400px;
-            font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+            font-family: ${({ theme }) => theme.FONT.ROBOTO};
 
         }
     }

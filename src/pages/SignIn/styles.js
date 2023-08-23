@@ -51,7 +51,7 @@ export const Form = styled.form`
     a {
         margin-top: 3.2rem;
 
-        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+        font-family: ${({ theme }) => theme.FONT.POPPINS};
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 2.4rem;
@@ -73,7 +73,7 @@ export const Form = styled.form`
             max-width: 50rem;
             min-height: 54rem;
 
-            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_SIGN};
+            background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
             display: flex;
             justify-content: center;
@@ -95,7 +95,7 @@ export const Form = styled.form`
         }
 
         .wrapper h1 {
-            font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+            font-family: ${({ theme }) => theme.FONT.POPPINS};
             font-weight: 500;
             font-size: 3.2rem;
             line-height: 140%;

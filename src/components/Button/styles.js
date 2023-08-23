@@ -10,7 +10,7 @@ export const Container = styled.button`
   border: 0;
   border-radius: 5px;
 
-  font-family: ${({theme}) => theme.FONT.FONT_POPPINS};
+  font-family: ${({theme}) => theme.FONT.POPPINS};
   font-size: 1.4rem;
 
   background-color: ${({theme}) => theme.COLORS.BACKGROUND_BUTTON_300};

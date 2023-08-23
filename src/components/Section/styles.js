@@ -5,7 +5,7 @@ export const Container = styled.section`
 
     > h2 {
         
-        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+        font-family: ${({ theme }) => theme.FONT.POPPINS};
         font-size: 1.8rem;
         font-weight: 500;  
         color: ${({ theme }) => theme.COLORS.GRAY_100};

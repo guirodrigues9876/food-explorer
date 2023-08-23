@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   label {
     font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+    font-family: ${({ theme }) => theme.FONT.ROBOTO};
     line-height: 100%;
 
     color: ${({ theme }) => theme.COLORS.GRAY_300};
@@ -26,7 +26,7 @@ export const Container = styled.div`
     background-color: transparent;
     
     font-size: 1.4rem;
-    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+    font-family: ${({ theme }) => theme.FONT.ROBOTO};
     line-height: 160%;
     padding: 1.6rem;
 

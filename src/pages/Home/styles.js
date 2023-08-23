@@ -36,7 +36,7 @@ export const Banner = styled.div`
   min-width: 37rem;
   margin: 4.4rem 0 6.2rem;
 
-  font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+  font-family: ${({ theme }) => theme.FONT.POPPINS};
 
   display: flex;
   align-items: center;

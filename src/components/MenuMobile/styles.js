@@ -54,7 +54,7 @@ export const Header = styled.div`
   width: 100%;
   height: 11.4rem;
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_SIGN};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ export const Header = styled.div`
 
   span {
     font-size: 2.1rem;
-    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+    font-family: ${({ theme }) => theme.FONT.ROBOTO};
     color: ${({ theme }) => theme.COLORS.GRAY_100};
    }
   
@@ -100,7 +100,7 @@ export const Content = styled.div`
     align-self: flex-start;
 
     font-size: 2.4rem;
-    font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+    font-family: ${({ theme }) => theme.FONT.POPPINS};
     font-weight: 300;
     line-height: 140%;
 
@@ -136,7 +136,7 @@ export const Search = styled.div`
   }
 
   > input {
-    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+    font-family: ${({ theme }) => theme.FONT.ROBOTO};
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 100%;

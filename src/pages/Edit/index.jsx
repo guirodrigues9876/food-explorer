@@ -26,10 +26,6 @@ export function Edit() {
     const [ newIngredient, setNewIngredient ] = useState("");
     const [ price, setPrice ] = useState(0);
     const [ description, setDescription ] = useState("");
-
-    // const [image, setImage] = useState(null);
-    // const [fileName, setFileName] = useState("");
-    // const [updatedImage, setUpdatedImage] = useState(null);
     
     function handleImageChange(event) {
         const file = event.target.files[0];

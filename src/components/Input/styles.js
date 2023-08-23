@@ -7,7 +7,7 @@ export const Container = styled.div`
     gap: 1.6rem;
 
     > label {
-        font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme }) => theme.FONT.ROBOTO};
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 100%;
@@ -35,7 +35,7 @@ export const Field = styled.div`
         width: 100%;
         border: none;
         
-        font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme }) => theme.FONT.ROBOTO};
         font-size: 1.6rem;
         
         background-color: transparent;

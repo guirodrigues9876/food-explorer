@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   text-align: center;
   font-size: 1.4rem;
-  font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+  font-family: ${({ theme }) => theme.FONT.POPPINS};
   font-weight: 500;
   line-height: 2.4rem;
 `;

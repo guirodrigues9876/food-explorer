@@ -29,7 +29,7 @@ export const Container = styled.div`
     }
 
     > span {
-        font-family: ${({ theme}) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme}) => theme.FONT.ROBOTO};
         font-weight: 400;
         font-size: 1.6rem;
         text-align: center;
@@ -71,7 +71,7 @@ export const Title = styled.div`
   color: ${({ theme }) => theme.COLORS.GRAY_200};
 
   h2 {
-    font-family: ${({ theme}) => theme.FONT.FONT_POPPINS};
+    font-family: ${({ theme}) => theme.FONT.POPPINS};
     font-weight: 500;
     font-size: 1.4rem;
     text-align: center;
@@ -113,7 +113,7 @@ export const Description = styled.div`
             display: block;
             text-align: center;
             font-size: 1.4rem;
-            font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+            font-family: ${({ theme }) => theme.FONT.ROBOTO};
             line-height: 160%;
             
             color: ${({ theme }) => theme.COLORS.GRAY_300};
@@ -132,7 +132,7 @@ export const Picker = styled.div`
     align-items: center;
 
     > span {
-        font-family: ${({ theme}) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme}) => theme.FONT.ROBOTO};
         font-weight: 400;
         font-size: 1.6rem;
         text-align: center;

@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 100%;
     height: 11.4rem;
 
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_SIGN};
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ export const Menu = styled.div`
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_BUTTON_300};
         border-radius: 99px;
 
-        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+        font-family: ${({ theme }) => theme.FONT.POPPINS};
         font-weight: 500;
         font-size: 1.4rem;
       }
@@ -93,7 +93,7 @@ export const Desktop = styled.div`
 
     border-radius: .5rem;
 
-    font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+    font-family: ${({ theme }) => theme.FONT.POPPINS};
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 2.4rem;
@@ -123,7 +123,7 @@ export const Desktop = styled.div`
     
       border-radius: .5rem;
 
-      font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+      font-family: ${({ theme }) => theme.FONT.POPPINS};
       font-size: 1.4rem;
       font-weight: 500;
       line-height: 2.4rem;
@@ -154,7 +154,7 @@ export const Search = styled.div`
     }
 
     > input {
-      font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+      font-family: ${({ theme }) => theme.FONT.ROBOTO};
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 100%;
@@ -187,7 +187,7 @@ export const NewDish = styled(Link)`
     
   border-radius: .5rem;
 
-  font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+  font-family: ${({ theme }) => theme.FONT.POPPINS};
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.4rem;
@@ -217,7 +217,7 @@ export const Logo = styled.div`
   > p {
       display: flex;
       font-size: 1.2rem;
-      font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+      font-family: ${({ theme }) => theme.FONT.ROBOTO};
       justify-content: end;
       color: ${({ theme }) => theme.COLORS.CYAN};
   }

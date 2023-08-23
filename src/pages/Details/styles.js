@@ -60,7 +60,7 @@ export const Description = styled.div`
     h2 {
         margin: 1.6rem 0 2.4rem 0;
         font-size: 2.7rem;
-        font-family: ${({theme }) => theme.FONT.FONT_POPPINS};
+        font-family: ${({theme }) => theme.FONT.POPPINS};
         font-weight: 500;
     
         color: ${({ theme }) => theme.COLORS.GRAY_100};
@@ -69,7 +69,7 @@ export const Description = styled.div`
     p {
         text-align: center;
         font-size: 1.6rem;
-        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+        font-family: ${({ theme }) => theme.FONT.POPPINS};
     }
     
     @media(min-width: 1024px) {
@@ -85,7 +85,7 @@ export const Description = styled.div`
         > p {
             text-align: left;
             font-size: 2.4rem;
-            font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+            font-family: ${({ theme }) => theme.FONT.ROBOTO};
             line-height: 160%;
             
             color: ${({ theme }) => theme.COLORS.GRAY_300};
@@ -112,7 +112,7 @@ export const Picker = styled.div`
     align-items: center;
 
     > span {
-        font-family: ${({ theme}) => theme.FONT.FONT_ROBOTO};
+        font-family: ${({ theme}) => theme.FONT.ROBOTO};
         font-weight: 400;
         font-size: 2.2rem;
         text-align: center;
@@ -142,7 +142,7 @@ export const ButtonPurchase = styled.button`
     span {
         text-align: center;
         font-size: 1.3rem;
-        font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+        font-family: ${({ theme }) => theme.FONT.POPPINS};
         font-weight: 500;
 
         color: ${({ theme }) => theme.COLORS.WHITE};

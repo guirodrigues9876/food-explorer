@@ -1,5 +1,5 @@
 import { Container, Field } from './styles';
-import { BsChevronDown } from "react-icons/bs";
+import { FiChevronDown } from "react-icons/fi";
 
 export function Select({ title, ...rest }) {
   return (
@@ -11,7 +11,7 @@ export function Select({ title, ...rest }) {
                 <option value="dessert">Sobremesas</option>
                 <option value="drinks">Bebidas</option>
             </select>
-            <BsChevronDown size={24} />
+            <FiChevronDown size={24} />
         </Field>
     </Container>
   );

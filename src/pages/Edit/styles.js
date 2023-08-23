@@ -25,7 +25,7 @@ export const Content = styled.div`
     h1 {
       margin: 3.5rem 0 2.4rem;
 
-      font-family: ${({ theme }) => theme.FONT.FONT_POPPINS};
+      font-family: ${({ theme }) => theme.FONT.POPPINS};
       font-weight: 500;
       font-size: 3.2rem;
     }
@@ -96,7 +96,7 @@ export const Ingredients = styled.div`
 
   label {
     font-size: 1.6rem;
-    font-family: ${({ theme }) => theme.FONT.FONT_ROBOTO};
+    font-family: ${({ theme }) => theme.FONT.ROBOTO};
     line-height: 100%;
 
     color: ${({ theme }) => theme.COLORS.GRAY_300};
