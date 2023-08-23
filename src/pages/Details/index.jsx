@@ -14,7 +14,7 @@ import { Button } from "../../components/Button";
 import { ButtonText } from "../../components/ButtonText";
 import { IngredientTag } from "../../components/IngredientTag";
 
-import dishPlaceholder from "../../assets/dishPlaceholder.png";
+import dishPlaceholder from "../../assets/placeholder.png";
 
 
 export function Details(){

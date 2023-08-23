@@ -57,6 +57,12 @@ export const Container = styled.div`
         > span {
             font-size: 3.2rem;
         }
+
+        transition: transform 0.3s ease;
+
+        &:hover{
+          transform: scale(1.05);
+        }
     }
 
 `;

@@ -6,7 +6,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { BiPencil } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-import dishPlaceholder from "../../assets/dishPlaceholder.png";
+import dishPlaceholder from "../../assets/placeholder.png";
 
 import { Button } from "../Button";
 

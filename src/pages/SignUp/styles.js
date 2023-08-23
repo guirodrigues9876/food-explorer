@@ -21,16 +21,18 @@ export const Form = styled.form`
     min-width: 31.6rem;
     
     .brand {
-    align-self: flex-start;
+        align-self: flex-start;
+        animation: topDown 1s 0ms ease;
     }
 
     .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    width: 100%;
-    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 100%;
+       
+
     }
 
     .wrapper h1 {
@@ -45,6 +47,14 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         gap: 3.2rem;
+        animation: downTop 1s 0ms forwards;
+        :nth-child(1){
+        }
+
+    }
+
+    button {
+        animation: downTop 1s 0ms forwards;
 
     }
 
@@ -56,6 +66,9 @@ export const Form = styled.form`
         font-size: 1.4rem;
         line-height: 2.4rem;
         color: ${({ theme }) => theme.COLORS.WHITE};
+
+        animation: downTop 1s 0ms forwards;
+
     }
 
     @media(min-width: 1024px) {
@@ -67,6 +80,7 @@ export const Form = styled.form`
 
         .brand {
             align-self: center;
+            animation: none;
         }
 
         .wrapper {
@@ -83,11 +97,14 @@ export const Form = styled.form`
             
             padding: 6.4rem;
             border-radius: 1.6rem;
+
+            animation: slide 1s ease 0s 1 normal none;
         }
 
         .inputs {
             gap: 3.2rem;
             margin: 0;
+
         }
 
         a {
@@ -101,7 +118,45 @@ export const Form = styled.form`
             line-height: 140%;
 
             display: flex;
+
+            animation: topDown 1s 0ms ease;
+
         }
     }
+
+    @keyframes slide{
+        
+        0% {
+            transform:  translate(200px);
+        }
+        
+        100% {
+            transform:  translate(0px);
+
+        }
+    }
+
+    @keyframes downTop {
+        0%{
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes topDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
 `;
 
