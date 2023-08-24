@@ -46,13 +46,30 @@ Deploy: https://stately-monstera-e92228.netlify.app
 To run on your machine locally. Make sure you have Node.js and npm installed before committing with the steps below:
 
 1. Clone repository:
-
+  ```
+teste
+```
 2. Install dependencies
 
 3. Start server
 
 
-👤 Users
+## 👤 Users
+
+This application has two interfaces: admin and user. The admin can manage the menu by adding, editing and removing dishes. The user can see the menu and search for dishes by filtering by name and ingredients
+
+To access the user interface, use the following login information:
+
+User:
+-Email: user@email.com
+-Password: user123
+
+To access the admin interface, use the following login information:
+
+Admin:
+
+-Email: admin@email.com
+-Password: admin123
 
 <p align="center">
   
