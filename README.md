@@ -1,6 +1,6 @@
 # <h1 align="center">Food-Explorer</h1>
 
-<p align="center">Challenge Food Explorer - Final Challenge Rockeseat Explorer course</p>
+<p align="center">Final Challenge Rockeseat Explorer course</p>
 
 <p align="center">
   <a href="#-Worked-concepts">Worked concepts</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -13,12 +13,22 @@
   <img alt="timer project" src="./src/assets/cover.png" width="100%">
 </p>
 
-## ✔ Worked concepts
-- Mobile First
-- Responsive Design
-- Layout Grid
-- Animations and transitions
-- Media queries
+## 📁 Project
+
+The application is an interactive menu for a fictitious restaurant.
+
+the application has an adminstrator and user interface. It has an adminstrator and user interface.
+
+# ✔ Funcionalities
+
+- Login
+- Add user
+- Add dishes
+- Edit dishes
+- Show dishes
+- Delete dishes
+- Filter dishes
+- Logout
 
 ## 🚀 Technologies
 
@@ -41,9 +51,8 @@ To run on your machine locally. Make sure you have Node.js and npm installed bef
 
 3. Start server
 
-   
 
-
+👤 Users
 
 <p align="center">
   
