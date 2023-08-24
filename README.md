@@ -51,7 +51,7 @@ $ npm install
 ```
 3. Start server
 ```
-npm run dev
+$ npm run dev
 ```
 
 ## 👤 Users
@@ -75,7 +75,7 @@ Admin:
   
 </p>
 
-## 💻 [take a look at the backend] ([https://chrome.google.com/webstore/detail/codecopy/fkbfebkcoelajmhanocgppanfoojcdmg](https://github.com/guirodrigues9876/food-explorer-api))
+## 💻 [take a look at the backend] ((https://github.com/guirodrigues9876/food-explorer-api))
 
 
 ## 📝 License
