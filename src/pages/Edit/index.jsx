@@ -51,11 +51,10 @@ export function Edit() {
             navigate("/")
         }catch (error){
             if (error.response) {
-                alert(error.response.data.message);
-            } else {
-                alert("Não foi possível excluir o prato.");
-            }
-        }
+                return alert(error.response.data.message);
+              }
+              return alert("Erro ao carregar informações");
+          }
     }
 
     async function handleUpdateDish(){
