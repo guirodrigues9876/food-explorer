@@ -46,8 +46,8 @@ Deploy: https://stately-monstera-e92228.netlify.app
 To run on your machine locally. Make sure you have Node.js and npm installed before committing with the steps below:
 
 1. Clone repository:
-  ```
-teste
+```
+teste testfgdgdfgdg
 ```
 2. Install dependencies
 
