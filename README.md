@@ -8,6 +8,7 @@
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Users">Users</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-take-a-look-at-the">Back-end</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-License">License</a>
 </p>
 
@@ -77,7 +78,7 @@ Admin:
   
 </p>
 
-## 💻 [take a look at the backend] ((https://github.com/guirodrigues9876/food-explorer-api))
+## 💻 take a look at the [Back-end](https://github.com/guirodrigues9876/food-explorer-api)
 
 
 ## 📝 License
