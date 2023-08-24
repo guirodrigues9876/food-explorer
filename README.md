@@ -78,7 +78,7 @@ Admin:
   
 </p>
 
-## 💻 [Back-end](https://github.com/guirodrigues9876/food-explorer-api)
+## 💻 take a look at the [Back-end](https://github.com/guirodrigues9876/food-explorer-api)
 
 
 ## 📝 License
