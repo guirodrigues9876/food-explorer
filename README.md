@@ -47,12 +47,16 @@ To run on your machine locally. Make sure you have Node.js and npm installed bef
 
 1. Clone repository:
 ```
-teste testfgdgdfgdg
+git clone https://github.com/guirodrigues9876/food-explorer.git
 ```
 2. Install dependencies
-
+```
+$ npm install
+```
 3. Start server
-
+```
+npm run dev
+```
 
 ## 👤 Users
 
@@ -61,15 +65,15 @@ This application has two interfaces: admin and user. The admin can manage the me
 To access the user interface, use the following login information:
 
 User:
--Email: user@email.com
--Password: user123
+- Email: user@email.com
+- Password: user123
 
 To access the admin interface, use the following login information:
 
 Admin:
 
--Email: admin@email.com
--Password: admin123
+- Email: admin@email.com
+- Password: admin123
 
 <p align="center">
   
