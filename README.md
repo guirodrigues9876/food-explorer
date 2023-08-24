@@ -1,8 +1,55 @@
-# React + Vite
+# <h1 align="center">Food-Explorer</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">Challenge Food Explorer - Final Challenge Rockeseat Explorer course</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="#-Worked-concepts">Worked concepts</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-License">License</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <img alt="timer project" src="./src/assets/cover.png" width="100%">
+</p>
+
+## ✔ Worked concepts
+- Mobile First
+- Responsive Design
+- Layout Grid
+- Animations and transitions
+- Media queries
+
+## 🚀 Technologies
+
+- Axios
+- ReactJS
+- Styled Components
+- ViteJS
+
+## 💻 Project
+
+## 💡 Usage
+
+Deploy: https://stately-monstera-e92228.netlify.app
+
+To run on your machine locally. Make sure you have Node.js and npm installed before committing with the steps below:
+
+1. Clone repository:
+
+2. Install dependencies
+
+3. Start server
+
+   
+
+
+
+<p align="center">
+  
+</p>
+
+## 📝 License
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p> 
