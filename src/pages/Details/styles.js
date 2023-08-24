@@ -22,10 +22,10 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3.6rem 0 1.6rem 0;
+    margin: 3.6rem 0 5.6rem 0;
     padding: 0 5.6rem;
 
-    button {
+    .backButton {
         align-self: flex-start;
         margin-bottom: 1.6rem;
     }
@@ -78,6 +78,7 @@ export const Description = styled.div`
         align-items: flex-start;
         gap: 1.5rem;
         margin-bottom: 1.5rem;
+
         h2 {
             font-size: 4rem;          
         }
@@ -121,40 +122,7 @@ export const Picker = styled.div`
 
 `;
 
-export const ButtonPurchase = styled.button`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 3.7rem;
-
-    width: 100%;
-    gap: .5rem;
-    border-radius: .3rem;
-
-    border: none;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_BUTTON_300};
-
-    svg {
-        color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-
-    span {
-        text-align: center;
-        font-size: 1.3rem;
-        font-family: ${({ theme }) => theme.FONT.POPPINS};
-        font-weight: 500;
-
-        color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-
-    @media(min-width: 1024px) {
-        width: 20rem;
-    }
-`;  
-
 export const Order = styled.div`
-  /* display: ${({ admin }) => admin ? 'none' : 'flex'}; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,5 +137,35 @@ export const Order = styled.div`
     justify-content: flex-start;
     align-items: center;
 
+    .editButton{
+        width: fit-content;
+        padding: 1.2rem 2.4rem;
+    }
+
   }
 `
+
+export const AddButton = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    height: 4.8rem;
+    border: 0;
+    border-radius: 5px;
+
+    font-family: ${({theme}) => theme.FONT.POPPINS};
+    font-size: 1.4rem;
+
+    background-color: ${({theme}) => theme.COLORS.BACKGROUND_BUTTON_300};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+
+    @media(min-width: 1024px) {
+            width: fit-content;
+            padding: 1.2rem 2.4rem;
+
+    }
+
+`;
