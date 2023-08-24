@@ -67,6 +67,7 @@ export function New() {
 
             await api.post("/dishes", formData);
             alert("Prato cadastrado com sucesso!");
+            navigate(-1);
         }catch ( error ) {
             if (error.response) {
                 alert(error.response.data.message);
