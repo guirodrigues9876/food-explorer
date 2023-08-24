@@ -15,9 +15,7 @@
 
 ## 📁 Project
 
-The application is an interactive menu for a fictitious restaurant.
-
-the application has an adminstrator and user interface. It has an adminstrator and user interface.
+The application is an interactive menu for a fictitious restaurant. It has an adminstrator and user interface. It has an adminstrator and user interface.
 
 # ✔ Funcionalities
 
@@ -36,8 +34,6 @@ the application has an adminstrator and user interface. It has an adminstrator a
 - ReactJS
 - Styled Components
 - ViteJS
-
-## 💻 Project
 
 ## 💡 Usage
 
@@ -78,6 +74,9 @@ Admin:
 <p align="center">
   
 </p>
+
+## 💻 [take a look at the backend] ([https://chrome.google.com/webstore/detail/codecopy/fkbfebkcoelajmhanocgppanfoojcdmg](https://github.com/guirodrigues9876/food-explorer-api))
+
 
 ## 📝 License
 <p align="center">
