@@ -1,4 +1,4 @@
-import { Container, Content, Description, Order, Picker, ButtonPurchase, Ingredients } from "./styles";
+import { Container, Content, Description, Order, Picker, Ingredients,AddButton } from "./styles";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from "../../hooks/auth";
@@ -65,12 +65,12 @@ export function Details(){
 
             <Content>
 
-                <ButtonText onClick={handleBack}>
+                <ButtonText className="backButton" onClick={handleBack}>
                     <RxCaretLeft />
                     voltar
                 </ButtonText>
 
-                <img src={dishImage} alt={`Imagem do prato,lanche, sobremesa ou bebida `} />
+                <img src={dishImage} alt={"Imagem do prato,lanche, sobremesa ou bebida"} />
 
                 <Description>                
                     <h2>{data.name}</h2>
@@ -94,27 +94,29 @@ export function Details(){
 
                     <Order>
 
-                        {isAdmin &&
+                        {isAdmin ? (
                             <Button
                                 title={'Editar prato'}
                                 onClick={handleEdit}
+                                className="editButton"
                             />
 
-                        }
-
-                        {!isAdmin &&
+                        ) : (
                             <>
-                            <Picker>
-                                <AiOutlineMinus size={27} />
-                                <span>01</span>
-                                <AiOutlinePlus size={27} />
-                            </Picker>  
+                                <Picker>
+                                    <AiOutlineMinus size={27} />
+                                    <span>01</span>
+                                    <AiOutlinePlus size={27} />
+                                </Picker>  
 
-                                <Button
-                                    title={'incluir'}
-                                />
-                            </>
-                        }
+                                <AddButton>
+
+                                    <PiReceipt size={27} />
+                                    <span> pedir ∙ {(data.price)}</span>
+                                    
+                                </AddButton>
+                            </> 
+                        )}
                     </Order>
 
                 </Description>

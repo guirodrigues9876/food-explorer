@@ -11,6 +11,10 @@ export const Container = styled.div`
 
     display: flex;
     justify-content: center;
+
+    @media(min-width: 1024px) {
+      padding: 2.4rem 8rem;
+    }
 `;
 
 export const Menu = styled.div`
@@ -63,7 +67,8 @@ export const Menu = styled.div`
 
   @media(min-width: 1024px) {
     justify-content: space-between;
-    padding: 2.4rem 12.3rem;
+    padding: 2.4rem 0;
+    
 
     .mobile {
       display: none;

@@ -49,12 +49,14 @@ export function Home(){
                 <Content>
 
                     <Banner>
-                        <img 
+                        <div className="flavors">
+                            <img 
                             src={banner} 
                             alt="Macarons coloridos despencando com folhas verdes e frutas vermelhas." 
-                        />
+                            />
+                        </div>
                     
-                        <div>
+                        <div className="title">
                             <h1>Sabores inigualáveis</h1>
                             <p>Sinta o cuidado do preparo com ingredientes selecionados</p>
                         </div>
