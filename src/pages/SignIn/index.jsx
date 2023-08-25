@@ -12,12 +12,15 @@ import brand from "../../assets/logo.svg";
 export function SignIn(){
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const { signIn }= useAuth();
 
     function handleSignIn(){
-        signIn({email, password });
+        setLoading(true);
+        signIn({email, password }).finally(() => setLoading(false));
     }
+
 
     return(
         <Container>
@@ -49,6 +52,7 @@ export function SignIn(){
                     <Button 
                         title="Entrar"
                         onClick={handleSignIn}
+                        loading={loading}
                     />
                     <Link to="/register">
                         Criar conta
