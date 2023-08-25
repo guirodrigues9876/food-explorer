@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../../hooks/auth';
+import { useNavigate } from 'react-router-dom';
 
 import { Container, Menu, Desktop, Logout, Search, NewDish } from "./styles";
 import { MenuMobile } from "../MenuMobile";
@@ -9,14 +10,18 @@ import { RxExit } from "react-icons/rx";
 import { BsReceiptCutoff } from "react-icons/bs";
 import { Logo } from "../../components/Logo";
 
-import logo from "../../assets/logo.svg";
-
 export function Header({ filterDishes }){
     const { user, signOut } = useAuth();
+    const navigate = useNavigate();
     const isAdmin = user && user.isAdmin ? true : false;
 
 
     const [ showMenu, setShowMenu ] = useState(false);
+
+    function handleSignOut(){
+        navigate("/");
+        signOut();
+    }
 
     return (
         <Container>
@@ -35,8 +40,6 @@ export function Header({ filterDishes }){
                 </button>
 
                 <Logo isAdmin={isAdmin} />
-                    {/* <img src={ logo} alt= "Logo food explorer" />
-                    { isAdmin &&<p>admin</p>} */}
                 
 
                 {   !isAdmin &&
@@ -75,7 +78,7 @@ export function Header({ filterDishes }){
                         </>
                     }
                 
-                    <Logout onClick={signOut}>
+                    <Logout onClick={handleSignOut}>
                         <RxExit size={24}/>
                     </Logout>
                 </Desktop>

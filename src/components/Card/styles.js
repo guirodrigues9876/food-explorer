@@ -63,6 +63,16 @@ export const Container = styled.div`
         &:hover{
           transform: scale(1.05);
         }
+
+        .pencil{
+
+          transition: all .2s ease-in-out;
+
+          &:hover{
+            transform: scale(1.2);
+          }
+        
+        }
     }
 
 `;
@@ -90,10 +100,10 @@ export const Title = styled.div`
 
   a {
     display: flex;
+    align-items: center;
     gap: .2rem;
     
     color: ${({ theme }) => theme.COLORS.GRAY_100};
-    border: none;
     background: transparent;
   }
 
@@ -148,7 +158,6 @@ export const Picker = styled.div`
 `;
 
 export const Order = styled.div`
-  /* display: ${({ admin }) => admin ? 'none' : 'flex'}; */
   display: flex;
   align-items: center;
   justify-content: center;
