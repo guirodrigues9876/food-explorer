@@ -15,54 +15,61 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100%; */
   overflow-y: auto;
   overflow-x: hidden;
   grid-area: content;
-  `;
+`;
 
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     width: 100%;
+    max-width: 1122px;
     
     @media(min-width: 1024px) {
-    padding: 0 12.4rem;
+      /* padding: 0 12.4rem; */
     }
 `;
 
 
 export const Banner = styled.div`
-  min-width: 37rem;
-  margin: 4.4rem 0 6.2rem;
-
-  font-family: ${({ theme }) => theme.FONT.POPPINS};
-
+  width: calc(100% - 4rem);
+  height: 8rem;
+  margin: 4.4rem 1.6rem 6.2rem 3rem;
+  /* align-self: center; */
+  
   display: flex;
   align-items: center;
+  gap: 1rem;
+
+  font-family: ${({ theme }) => theme.FONT.POPPINS};
+  background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
+  border-radius: .8rem;
 
   position: relative;
-  
-  &::after {
-    content: "";
-    background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-    position: absolute;
-    border-radius: .8rem;
-    width: 100%;
-    height: 85%;
-    z-index: -1;
-    bottom: 0;
-    left: 15px;
-    
+
+  .flavors {
+    width: 50%;
+    height: 100%;
+
+    > img {
+      width:clamp(13.938rem, -0.612rem + 36.915vw, 21rem);
+      object-fit: cover;
+      align-self: end;
+
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+    }
+
   }
 
-  img {
-    width:clamp(11rem, -0.612rem + 46vw, 39.5rem);
-    object-fit: cover;
-    align-self: end;
-  }
-
-  div {
+  .title {
     display: flex;
     flex-direction: column;
     gap: .3rem;
@@ -78,12 +85,24 @@ export const Banner = styled.div`
     }
   }
 
-  @media(min-width: 1024px) {
-    width: 112rem;
-    height: 26rem;
+  @media(min-width: 491px){
+    height: 100px;
 
-    div {
-      margin-left: 10rem;
+  }
+
+  @media(min-width: 1024px) {
+    
+    margin-top: 10rem;
+    height: 260px;
+
+    .flavors {
+
+      > img {
+        width:clamp(55rem, -0.612rem + 36.915vw, 55rem);
+      }
+
+    }
+    .title {
 
       h1 {
         font-size: 4rem;
