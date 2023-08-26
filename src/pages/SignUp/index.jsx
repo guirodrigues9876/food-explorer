@@ -60,23 +60,23 @@ export function SignUp(){
                         <div className="inputs">   
                             <Input 
                                 type= "text"
-                                id= {'nome'} 
-                                title={'Seu nome'}
+                                id= {"nome"} 
+                                title={"Seu nome"}
                                 placeholder="Nome completo"
                                 onChange={e => setName(e.target.value)}
                             />
 
                             <Input 
                                 type= "email"
-                                id= {'email'} 
-                                title={'Email'}
+                                id= {"email"} 
+                                title={"Email"}
                                 placeholder="exemplo@exemplo.com"
                                 onChange={e => setEmail(e.target.value)}
                             />
                             <Input 
                                 type= "password"
-                                id= {'password'} 
-                                title={'Password'}
+                                id= {"password"} 
+                                title={"Senha"}
                                 placeholder="No mínimo 6 caracteres"
                                 onChange={e => setPassword(e.target.value)}
 

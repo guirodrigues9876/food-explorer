@@ -18,7 +18,7 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 100%; */
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   grid-area: content;
@@ -27,7 +27,7 @@ export const Main = styled.div`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+  
     width: 100%;
     max-width: 1122px;
     
@@ -40,8 +40,7 @@ export const Content = styled.div`
 export const Banner = styled.div`
   width: calc(100% - 4rem);
   height: 8rem;
-  margin: 4.4rem 1.6rem 6.2rem 3rem;
-  /* align-self: center; */
+  margin: 4.4rem 1.6rem 6.2rem 2rem;
   
   display: flex;
   align-items: center;

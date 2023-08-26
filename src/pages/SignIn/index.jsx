@@ -12,11 +12,15 @@ import brand from "../../assets/logo.svg";
 export function SignIn(){
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [ loading, setLoading ] = useState(false);
 
     const { signIn }= useAuth();
 
     function handleSignIn(){
+        if( !email || !password ){
+           return alert("Preencha todos os campos!");
+        }
+
         setLoading(true);
         signIn({email, password }).finally(() => setLoading(false));
     }
@@ -34,17 +38,17 @@ export function SignIn(){
                         <div className="inputs">   
                             <Input 
                                 type= "email"
-                                id= {'email'} 
-                                title={'Email'}
+                                id= {"email"} 
+                                title={"Email"}
                                 placeholder="exemplo@email.com"
                                 onChange={e => setEmail(e.target.value)}
                             />
 
                             <Input 
                                 type= "password"
-                                id= {'password'} 
-                                title={'password'}
-                                placeholder="No mínimo 6 caracteres"
+                                id= {"password"} 
+                                title={"Senha"}
+                                placeholder="Senha"
                                 onChange={e => setPassword(e.target.value)}
 
                             />
