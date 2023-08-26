@@ -69,7 +69,8 @@ export const Menu = styled.div`
     justify-content: space-between;
     padding: 2.4rem 0;
     
-
+    max-width: 1122px;
+    
     .mobile {
       display: none;
     }
