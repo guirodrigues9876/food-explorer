@@ -11,6 +11,21 @@ export default createGlobalStyle`
         font-size: 62.5%;
     }
 
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 96px;
+    }
+    
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        border-radius: 8px;
+        border: none;
+    }
+
     body {
         
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
