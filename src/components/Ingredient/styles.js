@@ -16,8 +16,9 @@ export const Container = styled.div`
     /* margin-bottom: 18px; */
     padding-right: 1.6rem;
 
-    padding: 16px;
+    padding: 16px;  
 
+    
     > button {
         display: flex;
         align-items: center;
