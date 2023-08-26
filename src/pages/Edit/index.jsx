@@ -45,6 +45,7 @@ export function Edit() {
     }
 
     async function handleDeleteDish(){
+       
         try{
             await api.delete(`/dishes/${params.id}`);
             alert("Prato excluído com sucesso!")
@@ -60,7 +61,7 @@ export function Edit() {
     async function handleUpdateDish(){
 
         if(!name || !category || !price || !ingredients || !description){
-            return alert("Preencha todos os campos.");
+            return alert("Preencha todos os campos de texto!");
         }
 
         if(newIngredient){

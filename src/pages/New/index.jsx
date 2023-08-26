@@ -51,8 +51,14 @@ export function New() {
 
     async function handleNewDish(){
 
-        // Check inputs        
-        
+        if( !name || !price || !ingredients || !description ){
+           return alert("Preencha todos os campos!");
+        }
+
+        if(newIngredient){
+            return alert("Você preencheu o campo ingrediente mas não adicionou!");
+        }
+
         try{
 
             const formData =  new FormData();
